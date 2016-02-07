@@ -38,9 +38,9 @@ set encoding=utf8   " Use UTF-8 as default encoding
 set number          " Show line numbers
 set numberwidth=3   " Width of numbers column
 
-"""""""""""""""""""""
-" Theme (Solarized) "
-"""""""""""""""""""""
+""""""""""""""""""""""""""""
+" Theme (Base16-Solarized) "
+""""""""""""""""""""""""""""
 
 set t_Co=16
 syntax enable
