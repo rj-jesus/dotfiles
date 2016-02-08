@@ -13,6 +13,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
