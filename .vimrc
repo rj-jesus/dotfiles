@@ -39,6 +39,13 @@ set encoding=utf8   " Use UTF-8 as default encoding
 set number          " Show line numbers
 set numberwidth=3   " Width of numbers column
 
+nnoremap <C-S-J> :m .+1<CR>==
+nnoremap <C-S-K> :m .-2<CR>==
+inoremap <C-S-J> <Esc>:m .+1<CR>==gi
+inoremap <C-S-K> <Esc>:m .-2<CR>==gi
+vnoremap <C-S-J> :m '>+1<CR>gv=gv
+vnoremap <C-S-K> :m '<-2<CR>gv=gv
+
 """"""""""""""""""""""""""""
 " Theme (Base16-Solarized) "
 """"""""""""""""""""""""""""
