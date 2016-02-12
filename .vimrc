@@ -34,17 +34,26 @@ filetype plugin indent on
 set expandtab       " Use spaces instead of tabs
 set tabstop=4       " 1 tab := 4 spaces
 set shiftwidth=4    " Use 4 spaces for indentation
-set softtabstop=4   " Backspace removes 4 spacesd
+set softtabstop=4   " Backspace removes 4 spaces
 set encoding=utf8   " Use UTF-8 as default encoding
 set number          " Show line numbers
 set numberwidth=3   " Width of numbers column
 
-nnoremap <C-S-J> :m .+1<CR>==
-nnoremap <C-S-K> :m .-2<CR>==
-inoremap <C-S-J> <Esc>:m .+1<CR>==gi
-inoremap <C-S-K> <Esc>:m .-2<CR>==gi
-vnoremap <C-S-J> :m '>+1<CR>gv=gv
-vnoremap <C-S-K> :m '<-2<CR>gv=gv
+" Use C-<J, K> to move lines up/down
+nnoremap <C-J> :m .+1<CR>==
+nnoremap <C-K> :m .-2<CR>==
+inoremap <C-J> <Esc>:m .+1<CR>==gi
+inoremap <C-K> <Esc>:m .-2<CR>==gi
+vnoremap <C-J> :m '>+1<CR>gv=gv
+vnoremap <C-K> :m '<-2<CR>gv=gv
+
+" Open matching braces, parenthesis, ...
+inoremap ' ''<Left>
+inoremap " ""<Left>
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap < <><Left>
+inoremap { {<CR>}<Esc>ko
 
 """"""""""""""""""""""""""""
 " Theme (Base16-Solarized) "
