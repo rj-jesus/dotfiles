@@ -16,10 +16,9 @@ MiscTabCloseButtons=TRUE
 MiscTabCloseMiddleClick=TRUE
 MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
+ColorCursor=#515151515151
+ColorForeground=#d3d3d0d0c8c8
+ColorBackground=#2d2d2d
+ColorPalette=#2d2d2d2d2d2d;#f2f277777a7a;#9999cccc9999;#ffffcccc6666;#66669999cccc;#cccc9999cccc;#6666cccccccc;#d3d3d0d0c8c8;#747473736969;#f9f991915757;#393939393939;#515151515151;#a0a09f9f9393;#e8e8e6e6dfdf;#d2d27b7b5353;#f2f2f0f0ecec
+ColorBold=#ffffffffffff
 
-ColorForeground=#839496
-ColorBackground=#002b36
-ColorCursor=#eeeee8e8d5d5
-ColorBold=#93a1a1
-ColorBoldUseDefault=FALSE
-ColorPalette=#073642;#dc322f;#859900;#b58900;#268bd2;#d33682;#2aa198;#eee8d5;#002b36;#cb4b16;#586e75;#657b83;#839496;#6c71c4;#93a1a1;#fdf6e3

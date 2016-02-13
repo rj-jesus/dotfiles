@@ -4,7 +4,6 @@
 set nocompatible       
 filetype off            
 
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -13,7 +12,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -39,7 +38,7 @@ set encoding=utf8   " Use UTF-8 as default encoding
 set number          " Show line numbers
 set numberwidth=3   " Width of numbers column
 
-" Use C-<J, K> to move lines up/down
+" Use C-<K, J> to move lines up/down
 nnoremap <C-J> :m .+1<CR>==
 nnoremap <C-K> :m .-2<CR>==
 inoremap <C-J> <Esc>:m .+1<CR>==gi
@@ -55,11 +54,11 @@ inoremap [ []<Left>
 inoremap < <><Left>
 inoremap { {<CR>}<Esc>ko
 
-""""""""""""""""""""""""""""
-" Theme (Base16-Solarized) "
-""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""
+" Theme (Base16-Eighties) "
+"""""""""""""""""""""""""""
 
 set t_Co=16
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme base16-eighties
