@@ -25,6 +25,9 @@ P_RESET="\[$(tput sgr0)\]"
 # Setting a fancy prompt for the current user
 export PS1="$P_GREEN\u$P_RED@$P_YELLOW\h:$P_CYAN\w$P_BLUE\\$ $P_RESET"
 
+# Setting dircolors
+eval `dircolors ~/.bash.d/dircolors.ansi-dark`
+
 # Setting aliases
 alias e='exit'
 alias ll='ls -l'
@@ -50,4 +53,3 @@ alias wic='nmap -sP 192.168.1.0/24'
 # To take advantage of multicore CPUs you can use the MAKEFLAGS variable. 
 # For example the equivalent of "make -j2" would be:
 export MAKEFLAGS="-j2"
-# Uncomment the above line to use it.

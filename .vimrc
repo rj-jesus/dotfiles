@@ -9,11 +9,11 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'chriskempson/base16-vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
-Plugin 'tpope/vim-fugitive'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
@@ -62,4 +62,4 @@ inoremap { {<CR>}<Esc>ko
 set t_Co=16
 syntax enable
 set background=dark
-colorscheme base16-solarized
+colorscheme solarized
