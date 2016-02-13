@@ -38,20 +38,22 @@ set encoding=utf8   " Use UTF-8 as default encoding
 set number          " Show line numbers
 set numberwidth=3   " Width of numbers column
 
-" Use C-<K, J> to move lines up/down
-nnoremap <C-J> :m .+1<CR>==
-nnoremap <C-K> :m .-2<CR>==
-inoremap <C-J> <Esc>:m .+1<CR>==gi
-inoremap <C-K> <Esc>:m .-2<CR>==gi
-vnoremap <C-J> :m '>+1<CR>gv=gv
-vnoremap <C-K> :m '<-2<CR>gv=gv
+" Use M-<K, J> to move lines up/down
+" Note: To get the  press Ctrl-V and Ctrl-[
+set <M-j>=j
+set <M-k>=k
+nnoremap <M-j> :m .+1<CR>==
+nnoremap <M-k> :m .-2<CR>==
+inoremap <M-j> <Esc>:m .+1<CR>==gi
+inoremap <M-k> <Esc>:m .-2<CR>==gi
+vnoremap <M-j> :m '>+1<CR>gv=gv
+vnoremap <M-k> :m '<-2<CR>gv=gv
 
 " Open matching braces, parenthesis, ...
 inoremap ' ''<Left>
 inoremap " ""<Left>
 inoremap ( ()<Left>
 inoremap [ []<Left>
-inoremap < <><Left>
 inoremap { {<CR>}<Esc>ko
 
 """""""""""""""""""""""""""
