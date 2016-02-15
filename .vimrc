@@ -49,9 +49,9 @@ set number          " Show line numbers
 set numberwidth=3   " Width of numbers column
 
 " Use M-<K, J> to move lines up/down
-" Note: To get the  press Ctrl-V and Ctrl-[
-set <M-j>=j
-set <M-k>=k
+" Note: To get the ^[ (not seen) press Ctrl-V and Ctrl-[
+set <M-j>=j       " ...=^[j
+set <M-k>=k       " ...=^[k
 nnoremap <M-j> :m .+1<CR>==
 nnoremap <M-k> :m .-2<CR>==
 inoremap <M-j> <Esc>:m .+1<CR>==gi
