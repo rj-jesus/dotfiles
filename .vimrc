@@ -47,6 +47,7 @@ set softtabstop=4   " Backspace removes 4 spaces
 set encoding=utf8   " Use UTF-8 as default encoding
 set number          " Show line numbers
 set numberwidth=3   " Width of numbers column
+set colorcolumn=80
 
 " Use M-<K, J> to move lines up/down
 " Note: To get the ^[ (not seen) press Ctrl-V and Ctrl-[
@@ -60,11 +61,17 @@ vnoremap <M-j> :m '>+1<CR>gv=gv
 vnoremap <M-k> :m '<-2<CR>gv=gv
 
 " Open matching braces, parenthesis, ...
-inoremap ' ''<Left>
-inoremap " ""<Left>
 inoremap ( ()<Left>
 inoremap [ []<Left>
-inoremap { {<CR>}<Esc>ko
+inoremap { {}<Left>
+
+if has("gui_running")
+    set guioptions-=T
+    " set lines=24 columns=100
+    set lines=24
+    let &columns = 80 + (&number || &relativenumber ? &numberwidth : 0)
+    set guifont=Monospace\ 12
+endif
 
 """""""""""""""""""""""""""
 " Theme (Base16-Eighties) "
@@ -72,5 +79,5 @@ inoremap { {<CR>}<Esc>ko
 
 set t_Co=16
 syntax enable
-set background=dark
+set background=light
 colorscheme base16-eighties

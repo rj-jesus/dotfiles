@@ -50,3 +50,7 @@ alias wic='nmap -sP 192.168.1.0/24'
 # To take advantage of multicore CPUs you can use the MAKEFLAGS variable. 
 # For example the equivalent of "make -j2" would be:
 export MAKEFLAGS="-j2"
+
+if [ -d /opt/pic32mx/bin ]; then
+    PATH=$PATH:/opt/pic32mx/bin
+fi
