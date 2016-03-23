@@ -7,14 +7,12 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'morhetz/gruvbox'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
-Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -28,14 +26,6 @@ filetype plugin indent on
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-"""""""""""""
-" UltiSnips "
-"""""""""""""
-
-let g:UltiSnipsExpandTrigger="<Tab>"
-let g:UltiSnipsJumpForwardTrigger="<C-l>"
-let g:UltiSnipsJumpBackwardTrigger="<C-h>"
-
 """"""""
 " Mine "
 """"""""
@@ -48,6 +38,7 @@ set encoding=utf8   " Use UTF-8 as default encoding
 set number          " Show line numbers
 set numberwidth=3   " Width of numbers column
 set colorcolumn=80
+syntax enable
 
 " Use M-<K, J> to move lines up/down
 " Note: To get the ^[ (not seen) press Ctrl-V and Ctrl-[
@@ -65,19 +56,18 @@ inoremap ( ()<Left>
 inoremap [ []<Left>
 inoremap { {}<Left>
 
+""""""""""""""""""""""
+" Interface settings "
+""""""""""""""""""""""
+
 if has("gui_running")
     set guioptions-=T
-    " set lines=24 columns=100
-    set lines=24
-    let &columns = 80 + (&number || &relativenumber ? &numberwidth : 0)
+    set lines=24 columns=100
+    set background=dark
+    colorscheme gruvbox
     set guifont=Monospace\ 12
+else
+    set t_Co=256
+    set background=light
+    colorscheme morning
 endif
-
-"""""""""""""""""""""""""""
-" Theme (Base16-Eighties) "
-"""""""""""""""""""""""""""
-
-set t_Co=16
-syntax enable
-set background=light
-colorscheme base16-eighties

@@ -23,12 +23,17 @@ P_WHITE="\[$(tput setaf 7)\]"
 P_RESET="\[$(tput sgr0)\]"
 
 # Setting a fancy prompt for the current user
-export PS1="$P_GREEN\u$P_RED@$P_YELLOW\h:$P_CYAN\w$P_BLUE\\$ $P_RESET"
+# default one
+# export PS1="$P_GREEN\u$P_RED@$P_YELLOW\h:$P_CYAN\w$P_BLUE\\$ $P_RESET"
+# no git newline
+# export PS1="$P_GREEN\u$P_RED@$P_YELLOW\h $P_CYAN\w\n$P_BLUE\$ $P_RESET"
+# git newline
+export PS1="$P_GREEN\u$P_RED@$P_YELLOW\h $P_CYAN\w $P_MAGENTA("'$(basename "$(git symbolic-ref HEAD 2>/dev/null)")$([[ ! -z "$(git status --porcelain 2>/dev/null)" ]] && echo " *")'")\n$P_CYAN\$ $P_RESET"
 
 # Setting aliases
 alias e='exit'
 alias ll='ls -l'
-alias lla='ls -al | less'
+alias lla='ls -la | less'
 alias mkdir='mkdir -pv' 
 alias rm='rm -i' 
 alias 1.='cd .. ; pwd'
@@ -42,6 +47,9 @@ alias emc='emacs -nw'
 
 alias psp='ps aux | grep'
 alias wic='nmap -sP 192.168.1.0/24'
+
+alias venv='source ~/bin/venv/bin/activate'
+alias md2html='python -m markdown'
 
 #######################################################################
 #                       Additional settings:                          #
