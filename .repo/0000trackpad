@@ -1,12 +1,14 @@
 #!/bin/sh
-case "$1" in
-	suspend|hibernate )
-		modprobe -r psmouse
-		;;
-	resume|thaw )
-		modprobe psmouse
-		;;
-esac
+# Used to solve suspension/hibernation problems (on my PC at least)
+#
+# $ ls -l /etc/pm/sleep.d/
+# -rwxr-xr-x 1 root root 115 Mar 22 11:30 0000trackpad
 
-# ls -l
-# -rwxr-xr-x 1 root root 115 Mar 22 11:30 /etc/pm/sleep.d/0000trackpad*
+case "$1" in
+    suspend|hibernate )
+        modprobe -r psmouse
+        ;;
+    resume|thaw )
+        modprobe psmouse
+        ;;
+esac
