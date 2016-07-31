@@ -44,12 +44,15 @@ alias h='history'
 alias eq='alsamixer -D equal'
 
 alias emc='emacs -nw'
+alias oct='octave --no-gui'
 
 alias psp='ps aux | grep'
 alias wic='nmap -sP 192.168.1.0/24'
 
 alias venv='source ~/bin/venv/bin/activate'
 alias md2html='python -m markdown'
+alias venv3='source ~/bin/venv3/bin/activate'
+alias pjson='python -m json.tool'
 
 #######################################################################
 #                       Additional settings:                          #

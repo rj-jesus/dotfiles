@@ -61,13 +61,26 @@ inoremap { {}<Left>
 """"""""""""""""""""""
 
 if has("gui_running")
+    set mouse=
     set guioptions-=T
     set lines=24 columns=100
     set background=dark
     colorscheme gruvbox
     set guifont=Monospace\ 12
+    nnoremap <C-z> :! bash<CR>
 else
     set t_Co=256
     set background=light
     colorscheme morning
 endif
+
+""""""""""""""""""""""
+" Clipboard settings "
+""""""""""""""""""""""
+
+"if has("xterm_clipboard")
+"    nnoremap <C-S-v> "+p
+"    inoremap <C-S-v> <Esc>"+gpi
+"    vnoremap <C-S-x> "+d
+"    vnoremap <C-S-c> "+ygv
+"endif
